@@ -1,2 +1,1 @@
-# Website for mc server
-[![wakatime](https://wakatime.com/badge/user/018cd9eb-93a0-4844-9616-ae1f8b30013f/project/018cef5c-0ab8-4a2f-bede-5d37bc3a036c.svg)](https://wakatime.com/badge/user/018cd9eb-93a0-4844-9616-ae1f8b30013f/project/018cef5c-0ab8-4a2f-bede-5d37bc3a036c)
+Ignore this repo it's just for whatever I want to host
