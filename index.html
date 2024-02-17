@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>EarthworldMC</title>
+    <title>Text Reverser</title>
+    <meta property="og:title" content="Text Reverser">
+    <meta property="og:description" content="The best way to reverse text for whatsapp">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Text Reverser">
+    <meta name="twitter:description" content="The best way to reverse text for whatsapp">
+    <style>
+       body {
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+    </style>
 </head>
-<body class="bg-stone-800">
-    <div id="navbar" class="sticky top-0 w-full h-20 bg-stone-900 shadow-xl p-8 rounded-b-md flex justify-between items-center">
-        <div class="text-3xl text-white font-medium">Earth<span class="text-green-500">World</span>MC</div>
-        <ul class="flex space-x-4 mr-2">
-            <li><a class="text-white hover:text-stone-300" href="#">Join Us</a></li>
-            <li><a class="text-white hover:text-stone-300" href="#">About</a></li>
-            <li><a class="text-white hover:text-stone-300" href="#">Live Map</a></li>
-            <li><a class="text-white hover:text-stone-300" href="#">Discord</a></li>
-        </ul>
-    </div>
-    <div class="p-10 text-white flex flex-col justify-center mt-8 items-center text-center">
-        <span class="text-5xl font-semibold">TYLER M Mathews</span>
-        <span class="text-xl mt-5">Planet Earth in Minecraft with Java and Bedrock crossplay (even console)</span>
-        <button class="bg-green-500 text-white rounded-lg shadow-lg p-2 w-32 h-12 mt-12 font-semibold text-lg" onclick="window.location.href='/play';">Join Server</button>
-        <span id="daysCounter" class="text-lg mt-4">Loading..</span>
+<body class="bg-gray-100">
+    <div class="max-w-sm mx-auto p-6 bg-white rounded-lg shadow-md flex items-center space-x-4">
+        <div class="flex-1">
+            <div class="mb-4">
+                <textarea id="myInput" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4" placeholder="Enter text here..."></textarea>
+            </div>
+            <div id="result" class="mb-4"></div>
+            <div class="mb-4">
+                <button id="share" class="w-full px-3 py-4 text-white bg-green-500 rounded-md focus:bg-green-600 focus:outline-none">Share on Whatsapp</button>
+            </div>
+        </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const startDate = new Date('2024-01-10');
-    const currentDate = new Date();
-    const timeDiff = currentDate - startDate;
-    const daysSince = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var myInput = document.querySelector('#myInput');
+        var result = document.querySelector('#result');
+        var shareButton = document.querySelector('#share');
 
-    document.getElementById('daysCounter').innerText = daysSince + ' days since the start date';
-});
+        myInput.addEventListener('input', function() {
+            result.innerText = myInput.value.split('').reverse().join('');
+        });
 
+        shareButton.addEventListener('click', function() {
+            let textToShare = encodeURIComponent(result.innerText);
+            let whatsapp_url = "https://api.whatsapp.com/send?text=" + textToShare;
+            window.open(whatsapp_url);
+        });
     </script>
 </body>
 </html>
