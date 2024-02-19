@@ -11,7 +11,7 @@
     <style>
        body {
             padding: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
        }
     </style>
 </head>
@@ -30,16 +30,16 @@
     </div>
     <center class="m-2"><a class="underline text-white" href="#" onclick="countinc()">Privacy Policy</a></center>
     <script>
-        var myInput = document.querySelector('#myInput');
-        var result = document.querySelector('#result');
-        var shareButton = document.querySelector('#share');
+        var myInput = document.querySelector("#myInput");
+        var result = document.querySelector("#result");
+        var shareButton = document.querySelector("#share");
         var copyButton = document.querySelector("#share-generic")
 
-        myInput.addEventListener('input', function() {
-            result.innerText = myInput.value.split('').reverse().join('');
+        myInput.addEventListener("input", function() {
+            result.innerText = myInput.value.split("").reverse().join("");
         });
 
-        shareButton.addEventListener('click', function() {
+        shareButton.addEventListener("click", function() {
             var textToShare = encodeURIComponent(result.innerText);
             var whatsapp_url = "https://api.whatsapp.com/send?text=" + textToShare;
             window.open(whatsapp_url);
