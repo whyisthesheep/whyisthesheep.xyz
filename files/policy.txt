@@ -1,4 +1,6 @@
 I dont track you
 
 This website uses GitHub Pages for hosting
-Apart from that its just html and css
+It's just html and css
+
+All assets are hosted locally
