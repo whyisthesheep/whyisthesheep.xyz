@@ -1,0 +1,26 @@
+I dont track you
+
+This website uses GitHub Pages for hosting
+Apart from that its just html and css
+
+Thats all. The less you use the better.
+If you want to start with privacy check out these guides:
+
+https://github.com/pluja/awesome-privacy 
+https://www.privacyguides.org/en/
+https://www.privacytools.io/
+
+Personally I use firefox with these modifications:
+
+- https://github.com/arkenfox/user.js - Firefox config file optimised for privacy
+- https://startpage.com - https://duck.com https://searx.space - Privacy focused search engines
+- https://ublockorigin.com/ - Ad/tracker blocker
+- https://bitwarden.com/ - Bitwarden password manager
+- https://decentraleyes.org/ - CDN decentraliser
+- https://sereneblue.github.io/chameleon/ - User agent spoofer, I have it set to periodically shuffle
+
+It is also worth disabling webrtc, geolocation etc
+
+If you need a VPN I would reccommend https://mullvad.net/
+
+Thank you for reading me
