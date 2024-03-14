@@ -5,17 +5,17 @@
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-    <span>someone told me I need to use apis more so there is $days until christmas</span>
+    <span>someone told me I need to use apis more so here there is 000 days until christmas</span>
     <script>
         fetch('https://christmascountdown.live/api/timeleft/total')
             .then(response => response.json())
             .then(data => {
                 const daysRemaining = data.days;
-                document.body.innerHTML = document.body.innerHTML.replace("$days", daysRemaining);
+                document.body.innerHTML = document.body.innerHTML.replace("000", daysRemaining);
             })
             .catch(error => {
                 console.error("The limit is 2 requests per 10 seconds per ip so stop spam reloading I guess: ", error);
-                document.body.innerHTML = document.body.innerHTML.replace("someone told me I need to use apis more so there is $days until christmas", "oops something went wrong don't laugh at me check the console");
+                document.body.innerHTML = document.body.innerHTML.replace("someone told me I need to use apis more so here there is 000 days until christmas", "oops something went wrong don't laugh at me check the console");
             });
     </script>
 </body>
