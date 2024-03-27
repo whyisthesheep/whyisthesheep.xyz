@@ -6,18 +6,6 @@
 </head>
 <body>
     <a class="tr" href="../">Home</a>
-    <span>someone told me I need to use apis more so here there is 000 days until christmas</span>
-    <script>
-        fetch('https://christmascountdown.live/api/timeleft/total')
-            .then(response => response.json())
-            .then(data => {
-                const daysRemaining = data.days;
-                document.body.innerHTML = document.body.innerHTML.replace("000", daysRemaining);
-            })
-            .catch(error => {
-                console.error("The limit is 2 requests per 10 seconds per ip so stop spam reloading I guess: ", error);
-                document.body.innerHTML = document.body.innerHTML.replace("someone told me I need to use apis more so here there is 000 days until christmas", "oops something went wrong don't laugh at me check the console");
-            });
-    </script>
+    <a href="javascript:(function() {     var bannerCenterDiv = document.getElementById('bannerCenter');     if (bannerCenterDiv) {         bannerCenterDiv.parentNode.removeChild(bannerCenterDiv);     } else {         alert('Error');     } })();">Drag me to the bookmarks bar</a>
 </body>
 </html>
